@@ -1,0 +1,500 @@
+:root{
+  font-size: 16px;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f2f2f2;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.header{
+  display: flex;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  overflow: hidden;
+  background-color:#091932;
+  z-index:99999;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#menu-toggle{
+  display: none;
+}
+
+.label-toggle{
+  display: none;
+}
+
+  .header img{
+    width: 2rem;
+    height: 2rem;    
+  }
+
+.header-right a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 0.9rem;
+  text-decoration: none;
+  height: auto;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.header-right a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.header-right a.active {
+  background-color: #5ab0fb;
+  color: white;
+}
+
+.scrolling-box{
+  margin-top: 2rem;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  text-align: center;             
+}
+
+section {
+  display: flex;
+  height: 100%;  
+  }
+
+.hero-image {
+  background-image: url("../images/portfolio_main-1200x800.jpg");
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-text {
+  display: block;
+  position: absolute;
+  max-width:  60vw;
+  max-height: 60vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background: #091932;
+  border: 1px solid #5ab0fb;
+  border-radius: 10px;
+  box-shadow: 0px 3px 20px 2px #5ab0fb;
+  opacity: 0.8;
+  
+}
+
+.profile_image{
+overflow: hidden;
+max-height: 50%;  
+}
+
+.profile-image img{
+  overflow: hidden;
+max-width: 20%;
+max-height:20%;
+border-radius: 50%;
+}
+
+.profile-text h1{
+  font-size: 2rem;
+}
+
+.button-knowmore {
+  display: block;
+ z-index: 99999;
+  padding: 0.35rem 1.2rem;
+  border : 0.1rem solid #FFFFFF;
+margin: 0 0.3rem 0.3rem 0;
+border-radius: 0.5rem;
+box-sizing: border-box;
+text-decoration: none;
+/* font-family: 'Roboto',sans-serif; */
+font-weight: 300;
+color: #FFFFFF;
+text-align: center;
+transition: all 0.2s;
+cursor: pointer;
+}
+.button-knowmore :hover{
+  color: #000000;
+  background-color:#FFFFFF;
+}
+
+.clear{
+    border-left:1px solid #FFFFFF; 
+     border-right:1px solid #FFFFFF;
+     /* top:10px;   */
+}
+
+.sectionContent{
+  padding: 1vh 1vw;
+}
+
+.contact-form{
+  max-width: 50%;
+  width: auto;
+  margin-left: auto;
+}
+
+/* .logo-group {
+  margin-top: 5vh;
+} */
+
+.logo-group .logo {
+  margin-right: 1rem;
+  width: 3rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 1px solid white;
+  background: white;
+  cursor: pointer;
+}
+
+.contact_icons{
+  margin-right: 0.5rem;
+  width: 1.8rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  border: 1px solid white;
+  background: white;  
+}
+
+.sectionContent article{
+margin-bottom: 5vh;
+}
+
+section#contact>.sectionContent article div{
+  text-align: left;
+  }
+
+  hr{
+    border: 0;
+    height: 1px;
+    margin: 4vh 0;
+    background-image: linear-gradient(to right, rgb(255, 255, 255, 0), rgb(255, 255, 255), rgb(255, 255, 255, 0));
+  }
+.sectionTitle h1 {
+	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+	font-style: italic;
+	color: #cf8a05;
+  padding: 1vh 1vw;
+}
+
+.sectionContent h2 {
+	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+	margin-bottom: -2px;
+}
+
+.sectionContent ul {
+list-style-type: none;
+}
+
+.subDetails {
+	font-size: 0.8rem;
+	font-style: italic;
+	margin-bottom: 3px;
+}
+
+.image{
+  margin-left: auto;
+}
+
+.section-image{   
+ height:25vh;
+ width: 25vw;
+ box-shadow: 0 2px 8px 0 black, 0 6px 15px 0 black;
+ }
+
+
+section:not(:first-child)
+{
+  min-height: 100%;
+  height: auto;
+  background: #091932;  
+  box-shadow: 0px 3px 5px 2px black;
+  flex-direction: row;
+  text-align: left;
+  margin: 3vh 1vw;
+  padding: 2vh 1vw; 
+}
+
+label{
+  padding: 1vh 0;
+  font-size: 1rem;
+}
+
+input[type=text],input[type=number],input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin: 1vh 0;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #5ab0fb;
+  color: white;
+  padding: 0.8rem 1.1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #fb5a5a;
+}
+
+.container {
+  border-radius: 5px;
+  /* padding: 5px; */
+}
+
+@media screen and (max-width: 480px) {
+
+ :root{
+   font-size: 13px;
+ }
+
+.header{
+  display: block;
+  overflow: hidden;
+}  
+
+.header-right{
+  display:block;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+ .header-right a {
+  display:block;
+  height: auto !important; 
+  overflow: hidden;
+   color: #f2f2f2;
+   text-align: center;
+   padding: 0.3rem;
+   text-decoration: none;
+   }
+
+   #menu-toggle:checked ~ .header-right {
+     
+    opacity: 1;
+    height: auto;
+    visibility: visible;
+  
+}
+   
+  .label-toggle {
+    background: linear-gradient(to bottom, #5ab0fb 0%, #5ab0fb 20%, transparent 20%, transparent 40%,
+    #5ab0fb 40%, #5ab0fb 60%, transparent 60%, transparent 80%, #5ab0fb 80%, #5ab0fb 100%); 
+    cursor: pointer;
+    display: block;
+    float: right;
+    height: 2rem;
+    width: 2rem;
+  }
+  .profile-text{
+    line-height: 50%;
+    }
+
+  .button-knowmore{
+    margin: auto auto;
+    display: block;
+  }
+  section:not(:first-child){
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;    
+  }
+  
+  .image{
+   order: -1;
+   margin: auto;
+   }
+
+   .contact-form{
+     margin: auto;
+   }
+}
+
+@media screen and (max-width: 768px) {
+  :root{
+    font-size: 14px;
+  }
+
+  section:not(:first-child){
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;    
+  }  
+
+  .image{
+   order: -1;
+   margin: auto;
+   }
+
+  .profile-text{
+    line-height: 50%;
+  }
+
+  .button-knowmore{
+    display: block;
+    margin: auto;
+  }
+.header-right a {
+    overflow:auto !important;
+    height: 80%;
+    z-index:99999;
+    padding: 0.5rem;
+  }
+
+  .contact-form{
+    margin: auto;
+  }
+}
+
+@-webkit-keyframes reset {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	40% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes reset {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@-moz-keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	40% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes reset {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	40% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* ------------------------------------------------*/
+/* Animation Rules*/
+body{
+
+  -webkit-animation-name: reset, fade-in;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease-in;
+
+	-moz-animation-name: reset, fade-in;
+  -moz-animation-duration: 1.5s;
+  -moz-animation-timing-function: ease-in;
+
+  animation-name: reset, fade-in;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in;
+}
+
+.scrolling-box_fade{
+  -webkit-animation-name: reset, fade-in;
+    -webkit-animation-duration: 2.5s;
+    -webkit-animation-timing-function: ease-in;
+	
+	-moz-animation-name: reset, fade-in;
+    -moz-animation-duration: 2.5s;
+    -moz-animation-timing-function: ease-in;
+	
+	animation-name: reset, fade-in;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-in;
+}
+
+.hero-image{
+  -webkit-animation-delay: 0, .5s;
+	-moz-animation-delay: 0, .5s;
+	animation-delay: 0, .5s;
+}
+
+.hero-text{
+  -webkit-animation-delay: 0, 1s;
+	-moz-animation-delay: 0, 1s;
+	animation-delay: 0, 1s;
+}
+
+.profile-image{
+  -webkit-animation-delay: 0, 1.5s;
+	-moz-animation-delay: 0, 1.5s;
+	animation-delay: 0, 1.5s;
+}
+
+.profile-text{
+  -webkit-animation-delay: 0, 2s;
+	-moz-animation-delay: 0, 2s;
+	animation-delay: 0, 2s;
+}
